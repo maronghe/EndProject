@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">勿忧停车</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_photos">Photos</string>
+    <string name="nav_movies">Movies</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about_us">About Us</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Photos</item>
+        <item>Movies</item>
+        <item>Notifications</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="title_activity_left_menu">勿忧停车 App</string>
+    <string name="nav_header_title">勿忧停车 App</string>
+    <string name="nav_header_subtitle">contact email: m598806805@163.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="pls_login">请先登录</string>
+
+    <string name="hero_image_for_login_screen">Hero image for login screen</string>
+    <string name="login_instruction_login_first">请输入您的用户名和密码,或使用指纹登陆!\n(注：指纹登陆是本机手机号登陆的用户)</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login_icon_image">Login Icon Image</string>
+    <string name="login_disclaimer_1">I accept the</string>
+    <string name="login_disclaimer_2">terms and conditions</string>
+    <string name="accept_the_terms_button">accept the terms button</string>
+    <string name="fingerprint_device_does_not_support">Your device doesn\'t support fingerprint authentication</string>
+    <string name="fingerprint_please_enable_permission">Please enable the fingerprint permission</string>
+    <string name="fingerprint_no_fingerprint_configured">No fingerprint configured. Please register at least one fingerprint in your device\'s Settings</string>
+    <string name="fingerprint_please_enable_lock_screen">Please enable lock screen security in your device\'s Settings</string>
+</resources>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".fragment.Fragment4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:background="@color/salmon"
+            android:gravity="center"
+            android:id="@+id/f4_layout_btn"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:src="@mipmap/pls_login"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:textSize="22dp"
+                android:textColor="@color/lightsteelblue"
+                android:text="@string/pls_login"/>
+
+        </LinearLayout>
+
+        <!--yue tingchequan-->
+        <LinearLayout
+            android:background="@color/silver"
+            android:layout_width="match_parent"
+            android:layout_height="180px"
+            android:layout_marginTop="8px"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50px"
+                    android:src="@mipmap/money"
+                    android:layout_height="50px" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_money"
+                        android:gravity="center_horizontal"
+                        android:text="14.2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="账户余额"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="@color/black"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="50px"
+                    android:src="@mipmap/quan"
+                    android:layout_height="50px" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_parkingCoupons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="停车券"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- items -->
+        <TextView
+            android:id="@+id/chepaiguanli"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/silver"
+            android:drawablePadding="10dp"
+            android:paddingLeft="50dp"
+            android:paddingTop="15dp"
+            android:text="车牌管理"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tingchejilu"
+            android:background="@color/silver"
+            android:drawablePadding="50dp"
+            android:paddingLeft="50dp"
+            android:paddingTop="15dp"
+            android:text="停车记录"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/wodechewei"
+            android:background="@color/silver"
+            android:paddingLeft="50dp"
+            android:paddingTop="15dp"
+            android:text="我的车位"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/silver"
+            android:drawablePadding="40dp"
+            android:paddingLeft="50dp"
+            android:paddingTop="15dp"
+            android:id="@+id/yijianfankui"
+            android:text="意见反馈                                   产品功能和意见反馈"
+            android:layout_gravity="center_horizontal"/>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
