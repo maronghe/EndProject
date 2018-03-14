@@ -5,10 +5,33 @@
     android:layout_height="match_parent"
     tools:context=".fragment.Fragment2">
 
-    <Button
+  <!--  <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/showMenu"
-        android:text="Show Left Menu Page"/>
+        android:text="Show Left Menu Page"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停车记录"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:textSize="50dp"/>
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/f2lvlistview">
+        </ListView>
+    </LinearLayout>
+
 
 </FrameLayout>

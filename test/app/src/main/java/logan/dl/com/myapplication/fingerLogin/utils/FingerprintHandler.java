@@ -3,12 +3,18 @@ package logan.dl.com.myapplication.fingerLogin.utils;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
 import android.os.CancellationSignal;
+import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.widget.Toast;
+
+import logan.dl.com.myapplication.activity.TotalActivity;
+import logan.dl.com.myapplication.fingerLogin.fingerPrintAuth;
+
 
 @TargetApi(Build.VERSION_CODES.M)
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
@@ -54,13 +60,29 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     // so to provide the user with as much feedback as possible I’m incorporating this information into my toast
     public void onAuthenticationHelp(int helpMsgId, CharSequence helpString) {
         Toast.makeText(context, "Authentication help\n" + helpString, Toast.LENGTH_LONG).show();
-    }@Override
+    }
 
+    @Override
     // onAuthenticationSucceeded is called when a fingerprint has been successfully matched to one of the fingerprints stored on the user’s device
     public void onAuthenticationSucceeded(
             FingerprintManager.AuthenticationResult result) {
 
-        Toast.makeText(context, "Success!12345", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Login Success!", Toast.LENGTH_SHORT).show();
+
+
+
+//        fingerPrintAuth finger = new fingerPrintAuth();
+//        finger.jumpToTotalActivity(context);
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(context , TotalActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                context.startActivity(intent);
+            }
+        },1000);
+
     }
 
 }

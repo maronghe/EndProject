@@ -13,25 +13,35 @@
         >
 
         <LinearLayout
+            android:id="@+id/f4_layout_btn"
             android:layout_width="match_parent"
             android:layout_height="500px"
             android:background="@color/salmon"
             android:gravity="center"
-            android:id="@+id/f4_layout_btn"
             android:orientation="vertical">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:src="@mipmap/pls_login"/>
+                android:src="@mipmap/pls_login" />
+
             <TextView
+                android:id="@+id/welcomename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:textSize="22dp"
-                android:textColor="@color/lightsteelblue"
-                android:text="@string/pls_login"/>
+                android:text="欢迎，马荣贺"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/welcomephonenum"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="22dp" />
 
         </LinearLayout>
 

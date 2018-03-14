@@ -3,10 +3,13 @@ package logan.dl.com.myapplication.fingerLogin;
 
 import android.Manifest;
 import android.app.KeyguardManager;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
@@ -30,7 +33,9 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
 import logan.dl.com.myapplication.R;
+import logan.dl.com.myapplication.activity.TotalActivity;
 import logan.dl.com.myapplication.fingerLogin.utils.FingerprintHandler;
+
 
 public class fingerPrintAuth extends AppCompatActivity {
 
@@ -181,5 +186,28 @@ public class fingerPrintAuth extends AppCompatActivity {
         public FingerprintException(Exception e) {
             super(e);
         }
+    }
+
+
+    public void jumpToTotalActivity(Context mcontext){
+//        Intent intent = new Intent(context , TotalActivity.class);
+//        startActivity(intent);
+//        finish();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(fingerPrintAuth.this , TotalActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+               startActivity(intent);
+               finish();
+            }
+        },1000);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+//        finish();
     }
 }

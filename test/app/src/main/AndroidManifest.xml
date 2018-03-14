@@ -21,12 +21,6 @@
     <!-- 用于申请调用A-GPS模块 -->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <!-- 用于申请获取蓝牙信息进行室内定位 -->
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-
-    <!-- finger permission -->
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logoo"
@@ -44,7 +38,9 @@
         <!-- acitivites -->
         <activity android:name=".MainActivity" />
         <activity android:name=".ShowMapActivity" />
-        <activity android:name=".activity.TotalActivity" />
+        <activity android:name=".activity.TotalActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- hide soft input mode-->
         <activity android:name=".activity.AppStartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,8 +52,20 @@
             android:name=".activity.LeftMenuActivity"
             android:label="@string/title_activity_left_menu"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.FingerLoginActivity" />
-        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".fingerLogin.fingerPrintAuth"></activity>
+
     </application>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- finger permission -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
 </manifest>

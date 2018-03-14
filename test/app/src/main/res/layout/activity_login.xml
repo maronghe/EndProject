@@ -155,12 +155,14 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/log_in"
+                    android:id="@+id/ib_login"
                     android:tooltipText="Click to FingerLogin"/>
 
                 <ImageButton
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/fingerprint"
+                    android:id="@+id/ib_finger"
                     android:tooltipText="Click to FingerLogin"/>
             </LinearLayout>
 

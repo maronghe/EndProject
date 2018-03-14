@@ -18,8 +18,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/lightgrey"
-        android:orientation="horizontal">
-        <include layout="@layout/bottom" />
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <include layout="@layout/bottom"
+            />
     </LinearLayout>
 
 
