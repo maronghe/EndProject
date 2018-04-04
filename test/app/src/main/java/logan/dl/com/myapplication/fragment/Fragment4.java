@@ -23,6 +23,10 @@ import org.json.JSONObject;
 
 import logan.dl.com.myapplication.R;
 import logan.dl.com.myapplication.ShowMapActivity;
+import logan.dl.com.myapplication.activity.FullscreenActivity;
+import logan.dl.com.myapplication.activity.ListTingCheWeiActivity;
+import logan.dl.com.myapplication.activity.TingCheZTActivity;
+import logan.dl.com.myapplication.activity.YiJianFanKuiActivity;
 import logan.dl.com.myapplication.other.utils.HttpCallbackListener;
 import logan.dl.com.myapplication.other.utils.HttpUtil;
 
@@ -122,19 +126,25 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.f4_layout_btn:
-                Toast.makeText(getContext(),"jump to reigster page ",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Hello!",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.chepaiguanli:
-                Toast.makeText(getContext(),"jump to chepaiguanli page ",Toast.LENGTH_SHORT).show();
+                Intent intent1= new Intent(getActivity(), ListTingCheWeiActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.tingchejilu:
-                Toast.makeText(getContext(),"jump to tingchejilu page ",Toast.LENGTH_SHORT).show();
+
+                Intent intent2 = new Intent(getActivity(), FullscreenActivity.class);
+                startActivity(intent2);
                 break;
+                //setting
             case R.id.wodechewei:
-                Toast.makeText(getContext(),"jump to wodechewei page ",Toast.LENGTH_SHORT).show();
+                Intent intent3 = new Intent(getActivity(), TingCheZTActivity.class);
+                startActivity(intent3);
                 break;
             case R.id.yijianfankui:
-                Toast.makeText(getContext(),"jump to yijianfankui page ",Toast.LENGTH_SHORT).show();
+                Intent intent4 = new Intent(getActivity(), YiJianFanKuiActivity.class);
+                startActivity(intent4);
                 break;
         }
     }

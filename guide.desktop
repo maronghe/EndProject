@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Help@IBM
+Comment=Help@IBM
+Icon=/usr/share/pixmaps/config-desktop-shortcuts/help.ico
+Type=Link
+URL=https://w3.ibm.com/help/
+Terminal=False

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
     <color name="colorAccent">#FF4081</color>
     <color name="black">#000000</color><!--黑色 -->
     <color name="white">#FFFFFF</color><!--白色-->
@@ -148,11 +148,13 @@
     <color name="colorTextIcons">#F2F2F2</color>
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#757575</color>
-    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorDivider">#bdbdbd</color>
     <color name="colorBackgroundLight">#F2F2F2</color>
     <color name="colorBackgroundDark">#212121</color>
     <color name="colorAlert">#F8333C</color>
     <color name="colorWarning">#FA7921</color>
     <color name="colorOK">#20BF55</color>
+
+    <color name="black_overlay">#66000000</color>
 
 </resources>

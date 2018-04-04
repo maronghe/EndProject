@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightslategrey"
+    android:orientation="vertical"
+    tools:context="logan.dl.com.myapplication.activity.YiJianFanKuiActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:text="FEEDBACK"
+        android:textColor="@color/white"
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/bisque"
+        android:backgroundTint="@color/bisque"
+        android:ems="10"
+        android:gravity="top"
+        android:layout_marginTop="20dp"
+        android:hint="Please input your feedback about yourself. And let us know your thinking right now."
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/yjfk_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/bisque"
+        android:ems="10"
+        android:hint="Please input your phone number."
+        android:inputType="phone" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send to us" />
+</LinearLayout>
