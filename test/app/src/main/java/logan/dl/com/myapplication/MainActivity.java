@@ -19,16 +19,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lat_textView = findViewById(R.id.lat);
-        lon_textView = findViewById(R.id.lon);
+//        lat_textView = findViewById(R.id.lat);
+//        lon_textView = findViewById(R.id.lon);
+//
+//        Intent intent = this.getIntent();
+//        Double lat = intent.getDoubleExtra("lat",0.0d);
+//        Double lon = intent.getDoubleExtra("lon",0.0d);
+//
+//        System.out.println("hengzuobiao = "+ lat  + "zhongzuobiao = "+ lon);
+//
+//        lat_textView.setText(""+lat);
+//        lon_textView.setText(""+lon);
 
-        Intent intent = this.getIntent();
-        Double lat = intent.getDoubleExtra("lat",0.0d);
-        Double lon = intent.getDoubleExtra("lon",0.0d);
 
-        System.out.println("hengzuobiao = "+ lat  + "zhongzuobiao = "+ lon);
 
-        lat_textView.setText(""+lat);
-        lon_textView.setText(""+lon);
+
     }
 }

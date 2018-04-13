@@ -80,6 +80,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
                     @Override
                     public void run() {
                         welcomename.setText(name);
+                        welcomename.append(".");
                         welcomenumber.setText(phoneNumber);
                     }
                 });

@@ -23,6 +23,8 @@ import com.amap.api.maps.model.MarkerOptions;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import logan.dl.com.myapplication.activity.ListTingCheWeiActivity;
+
 public class ShowMapActivity extends Activity {
 
     private MapView mapView;
@@ -77,16 +79,19 @@ public class ShowMapActivity extends Activity {
                         @Override
                         public boolean onMarkerClick(Marker marker) {
 
-                            Intent intent = new Intent(ShowMapActivity.this,MainActivity.class);
-                            marker.getPosition();
-                            System.out.println("marker.getPosition()->>>>>>>>>"+marker.getPosition());
-                            String position = marker.getPosition().toString();
-                            String[] location = position.replace("(","").replace(")","").split(",");
-//                            intent.putExtra("lat",location[0]);
-//                            intent.putExtra("lon",location[1]);
-                            intent.putExtra("lat",marker.getPosition().latitude);
-                            intent.putExtra("lon",marker.getPosition().longitude);
-                            startActivity(intent);
+//                            Intent intent = new Intent(ShowMapActivity.this,MainActivity.class);
+//                            marker.getPosition();
+//                            System.out.println("marker.getPosition()->>>>>>>>>"+marker.getPosition());
+//                            String position = marker.getPosition().toString();
+//                            String[] location = position.replace("(","").replace(")","").split(",");
+////                            intent.putExtra("lat",location[0]);
+////                            intent.putExtra("lon",location[1]);
+//                            intent.putExtra("lat",marker.getPosition().latitude);
+//                            intent.putExtra("lon",marker.getPosition().longitude);
+//                            startActivity(intent);
+
+                            Intent intent1= new Intent(ShowMapActivity.this, ListTingCheWeiActivity.class);
+                            startActivity(intent1);
                             return true;
                         }
                     });
