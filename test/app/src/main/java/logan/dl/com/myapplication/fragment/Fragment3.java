@@ -51,33 +51,39 @@ public class Fragment3 extends Fragment implements View.OnClickListener{
         showMapBtn.setOnClickListener(this);
         chongzhiBtn.setOnClickListener(this);
         myMoney  =  (TextView) view.findViewById(R.id.urmoney);
-        String address = "http://47.93.194.171:8081/myproject/api/welcome/getMoney?id=1";
-        HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
-            @Override
-            public void onFinish(String response) {
-                JsonObject json = new JsonParser().parse(response.toString()).getAsJsonObject();
-                final String name = json.get("money").getAsString();
-                // update ui
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        myMoney.append(" " + name);
-                        myMoney.append(" Yuan.");
-                    }
-                });
-
-                Log.d("TAG", response.toString());
-            }
-
-            @Override
-            public void onError(Exception e) {
-                Log.d("TAG", e.toString());
-            }
-        });
+//        String address = "http://47.93.194.171:8081/myproject/api/welcome/getMoney?id=18742530580";
+//        HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
+//            @Override
+//            public void onFinish(String response) {
+//                JsonObject json = new JsonParser().parse(response.toString()).getAsJsonObject();
+//                final String name = json.get("money").getAsString();
+//                // update ui
+//                getActivity().runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        myMoney.append(" " + name);
+//                        myMoney.append(" Yuan.");
+//                    }
+//                });
+//
+//                Log.d("TAG", response.toString());
+//            }
+//
+//            @Override
+//            public void onError(Exception e) {
+//                Log.d("TAG", e.toString());
+//            }
+//        });
 
 
 
         return view;
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
     @Override

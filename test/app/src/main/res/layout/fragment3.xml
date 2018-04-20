@@ -19,10 +19,11 @@
 
         <TextView
             android:id="@+id/urmoney"
-            android:textSize="50dp"
+            android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your Money:" />
+            android:text="充值中心"
+            android:textSize="50dp" />
 
         <Button
             android:id="@+id/chongzhi"
@@ -31,7 +32,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="200dp"
 
-            android:text="Top Up Recharge!" />
+            android:text="点击充值" />
 
     </LinearLayout>
 
