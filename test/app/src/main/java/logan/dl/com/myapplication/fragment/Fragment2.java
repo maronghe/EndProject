@@ -13,11 +13,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import logan.dl.com.myapplication.R;
+import logan.dl.com.myapplication.ShowMapActivity;
+import logan.dl.com.myapplication.activity.ListTingCheWeiActivity;
 import logan.dl.com.myapplication.adapter.F2VOAdapter;
 import logan.dl.com.myapplication.vo.F2VO;
 
@@ -32,6 +37,8 @@ public class Fragment2 extends Fragment implements View.OnClickListener{
     private Context context;
     private Button showMenuBtn;
     private String[] smss = {"goodgoodgoodgoodgoodgoodgoodgoodgoodgoodgoodgood", "greatgreatgreatgreatgreatgreatgreatgreatgreatgreatgreatgreatgreatgreat", "perfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfect", "vvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodery good"};
+    private TextView justjump;
+
 
     private static List<F2VO> f2VOList = new ArrayList<F2VO>();
 
@@ -92,6 +99,15 @@ public class Fragment2 extends Fragment implements View.OnClickListener{
                 intent.putExtra("sms_body",sms);
                 startActivity(intent);
 
+            }
+        });
+
+        justjump = (TextView) view.findViewById(R.id.justjump);
+        justjump.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1= new Intent(getActivity(), ListTingCheWeiActivity.class);
+                startActivity(intent1);
             }
         });
 

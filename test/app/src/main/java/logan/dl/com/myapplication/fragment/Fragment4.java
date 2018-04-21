@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,7 +20,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -30,8 +28,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import logan.dl.com.myapplication.R;
-import logan.dl.com.myapplication.ShowMapActivity;
-import logan.dl.com.myapplication.activity.ChongZhiActivity;
 import logan.dl.com.myapplication.activity.FullscreenActivity;
 import logan.dl.com.myapplication.activity.ListTingCheWeiActivity;
 import logan.dl.com.myapplication.activity.TingCheZTActivity;
@@ -50,7 +46,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
     private View view=null;
     private TextView tv_money;
     private Context context;
-    private LinearLayout f4_layout_btn;
+    private LinearLayout f4_layout_btn,layoutGoToTimes;
     private TextView tv_chepaiguanli,tv_tingchejilu,tv_wodechewei,tv_yijianfankui,welcomename,welcomenumber;
 
 
@@ -190,6 +186,9 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
         welcomenumber.setOnClickListener(this);
         welcomename.setOnClickListener(this);
 
+        layoutGoToTimes = (LinearLayout) view.findViewById(R.id.layoutGoToTimes);
+        layoutGoToTimes.setOnClickListener(this);
+
         /*
         tv_yijianfankui.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -212,7 +211,6 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
                 startActivity(intent1);
                 break;
             case R.id.tingchejilu:
-
                 Intent intent2 = new Intent(getActivity(), FullscreenActivity.class);
                 startActivity(intent2);
                 break;
@@ -224,6 +222,14 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
             case R.id.yijianfankui:
                 Intent intent4 = new Intent(getActivity(), YiJianFanKuiActivity.class);
                 startActivity(intent4);
+                break;
+            case R.id.layoutGoToTimes:
+//                //如果是用的v4的包，则用getActivity().getSuppoutFragmentManager();
+//                FragmentManager fm = getActivity().getFragmentManager();
+//                //注意v4包的配套使用
+//                Fragment fragment = new Fragment2();
+//                fm.beginTransaction().replace(R,fragment).commit();
+                //跳转页面
                 break;
         }
     }

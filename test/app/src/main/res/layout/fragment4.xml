@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".fragment.Fragment4">
 
     <LinearLayout
@@ -94,13 +93,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:id="@+id/layoutGoToTimes"
                 android:gravity="center"
                 android:orientation="horizontal">
 
 
                 <ImageView
                     android:layout_width="50px"
-                    android:src="@mipmap/quan"
+                    android:src="@mipmap/times"
                     android:layout_height="50px" />
 
                 <LinearLayout
@@ -109,15 +109,16 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tv_parkingCoupons"
+                        android:id="@+id/tv_parkingTimes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="停车券"/>
+                        android:text="停车次数" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
