@@ -71,7 +71,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
 //                    Toast.makeText(getContext(),msg.obj+"",Toast.LENGTH_SHORT).show();
                     Object obj = msg.obj;
                     JsonObject jsonObject = new JsonParser().parse(obj.toString()).getAsJsonObject();
-                    tv_money.setText(jsonObject.get("money")+"");
+                    tv_money.setText(jsonObject.get("money").toString().replace("\"","")+"");
 
                 }
             }

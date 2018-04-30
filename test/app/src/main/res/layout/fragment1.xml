@@ -55,7 +55,7 @@
                 android:layout_margin="5dp"
                 android:background="@color/red"
                 android:textSize="25dp"
-                android:text="haa"
+                android:text="新闻网"
                 android:gravity="center_horizontal|center_vertical"
                 />
 

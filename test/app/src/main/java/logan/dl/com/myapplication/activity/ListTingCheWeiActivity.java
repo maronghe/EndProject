@@ -88,7 +88,7 @@ public class ListTingCheWeiActivity extends AppCompatActivity implements Compoun
     class MyThread implements  Runnable{
         @Override
         public void run() {
-            String address = "http://169.254.170.19:8081/myproject/api/welcome/n1order?status="+status;//Local
+            String address = "http://47.93.194.171:8081/myproject/api/welcome/n1order?status="+status;//Local
             HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
                 @Override
                 public void onFinish(String response) {

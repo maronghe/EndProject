@@ -44,11 +44,11 @@ public class Fragment2 extends Fragment implements View.OnClickListener{
 
     static {
         F2VO f2VO1 = new F2VO();
-        f2VO1.setText("123456");
+        f2VO1.setText("18742530580 1H");
         f2VO1.setRiqi("2018-3-7");
         f2VOList.add(f2VO1);
         F2VO f2VO2= new F2VO();
-        f2VO2.setText("123456");
+        f2VO2.setText("18742530580 2H");
         f2VO2.setRiqi("2018-3-7");
         f2VOList.add(f2VO2);
     }
