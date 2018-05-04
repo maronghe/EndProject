@@ -31,6 +31,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import logan.dl.com.myapplication.R;
 import logan.dl.com.myapplication.ShowMapActivity;
@@ -129,8 +130,11 @@ public class Fragment2 extends Fragment implements View.OnClickListener{
                 if(msg.what == FLAG){
                     Object obj = msg.obj;
                     JsonObject jsonObject = new JsonParser().parse(obj.toString()).getAsJsonObject();
-                    Object object = jsonObject.get("data");
-                    Toast.makeText(getContext(),object+"",Toast.LENGTH_LONG).show();
+                    String jsonArrayStr = jsonObject.get("data").toString();
+                    System.out.println(jsonArrayStr+":jsonArray");
+                    List<Map<String,Object>> list = null;
+//                    JsonArray jsonArray =  new JsonParser().parse(jsonArrayStr).getAsJsonArray();
+//                    Toast.makeText(getContext(),object+"",Toast.LENGTH_LONG).show();
                 }
             }
         };
