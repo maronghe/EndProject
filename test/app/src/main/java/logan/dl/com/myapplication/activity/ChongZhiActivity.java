@@ -14,11 +14,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -72,7 +76,15 @@ public class ChongZhiActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void handleMessage(Message msg) {
                 if(msg.what == FLAG){
-                    Toast.makeText(ChongZhiActivity.this,msg.obj+"",Toast.LENGTH_SHORT).show();
+
+                    Gson gson = new Gson();
+                    HashMap map =  gson.fromJson((String) msg.obj , new HashMap<>().getClass());
+                    System.out.println("map.get(\"flag\")"+map.get("flag"));
+                    if((boolean)map.get("flag")){
+                        Toast.makeText(ChongZhiActivity.this,"Success!",Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(ChongZhiActivity.this,"Failed!",Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         };
