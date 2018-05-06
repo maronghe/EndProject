@@ -47,7 +47,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
     private TextView tv_money;
     private Context context;
     private LinearLayout f4_layout_btn,layoutGoToTimes;
-    private TextView tv_chepaiguanli,tv_tingchejilu,tv_wodechewei,tv_yijianfankui,welcomename,welcomenumber;
+    private TextView tv_chepaiguanli,tv_tingchejilu,tv_wodechewei,tv_yijianfankui,welcomename,welcomenumber,tv_tingchecishu;
 
 
     @Nullable
@@ -72,7 +72,8 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
                     Object obj = msg.obj;
                     JsonObject jsonObject = new JsonParser().parse(obj.toString()).getAsJsonObject();
                     tv_money.setText(jsonObject.get("money").toString().replace("\"","")+"");
-
+                    String sizeStr = "{\"money\":\"0\",\"size\":20}";
+                    tv_tingchecishu.setText(new JsonParser().parse(sizeStr).getAsJsonObject().get("size").toString());
                 }
             }
         };
@@ -175,6 +176,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
         tv_wodechewei = (TextView) view.findViewById(R.id.wodechewei);
         tv_yijianfankui = (TextView) view.findViewById(R.id.yijianfankui);
         tv_money = (TextView)view.findViewById(R.id.tv_money);
+        tv_tingchecishu = (TextView) view.findViewById(R.id.tv_parkingTimes);
 
         tv_chepaiguanli.setOnClickListener(this);
         tv_tingchejilu.setOnClickListener(this);

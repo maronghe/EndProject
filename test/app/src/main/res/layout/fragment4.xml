@@ -129,15 +129,16 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@color/silver"
             android:drawablePadding="10dp"
             android:paddingLeft="50dp"
             android:paddingTop="15dp"
-            android:text="车牌管理"
-            android:layout_gravity="center_horizontal"/>
+            android:text="上次停车场" />
 
         <TextView
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
@@ -152,16 +153,16 @@
 
 
         <TextView
+            android:id="@+id/wodechewei"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:id="@+id/wodechewei"
             android:background="@color/silver"
             android:paddingLeft="50dp"
             android:paddingTop="15dp"
-            android:text="我的车位"
-            android:layout_gravity="center_horizontal"/>
+            android:text="设置" />
 
 
         <TextView

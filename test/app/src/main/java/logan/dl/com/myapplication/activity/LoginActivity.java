@@ -25,10 +25,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         ib_finger = findViewById(R.id.ib_finger);
 
-        ib_login = findViewById(R.id.ib_finger);
+        ib_login = findViewById(R.id.ib_login);
 
         ib_finger.setOnClickListener(this);
-        ib_finger.setOnClickListener(this);
+        ib_login.setOnClickListener(this);
 
         // Initialize TextView to be used for simple feedback to the user
         TextView feedbackTextView = findViewById(R.id.tvFeedbackTextView);
@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 finish();
                 break;
             case R.id.ib_login:
-
+                startActivity(new Intent(LoginActivity.this,TotalActivity.class));
                 break;
         }
     }

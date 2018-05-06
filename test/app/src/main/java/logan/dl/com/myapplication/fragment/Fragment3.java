@@ -1,6 +1,7 @@
 package logan.dl.com.myapplication.fragment;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -31,6 +34,8 @@ import logan.dl.com.myapplication.other.utils.HttpUtil;
 
 public class Fragment3 extends Fragment implements View.OnClickListener{
 
+    private WebView webView;
+
     private View view=null;
     private Context context;
     private Button showMapBtn;
@@ -38,6 +43,7 @@ public class Fragment3 extends Fragment implements View.OnClickListener{
 
     private TextView myMoney;
 
+    @SuppressLint("JavascriptInterface")
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -75,10 +81,10 @@ public class Fragment3 extends Fragment implements View.OnClickListener{
 //            }
 //        });
 
-
-
+        webView = (WebView) view.findViewById(R.id.webview);
+        webView.loadUrl("https://cn.bing.com/");//加载url
+        webView.requestFocus();
         return view;
-
     }
 
     @Override

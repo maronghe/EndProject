@@ -11,12 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        ><Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/showMap"
-        android:text="Show Map"/>
-
+        >
         <TextView
             android:id="@+id/urmoney"
             android:gravity="center_horizontal"
@@ -24,15 +19,27 @@
             android:layout_height="wrap_content"
             android:text="充值中心"
             android:textSize="50dp" />
-
         <Button
             android:id="@+id/chongzhi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="200dp"
-
             android:text="点击充值" />
+        <Button
+            android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/showMap"
+        android:text="Show Map"/>
+
+
+
+        <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
 
     </LinearLayout>
 

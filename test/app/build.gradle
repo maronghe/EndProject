@@ -22,6 +22,10 @@ android {
             }
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -46,5 +50,6 @@ dependencies {
 
     //noinspection GradleCompatible
 //    compile 'com.android.support:recyclerview-v7:24.0.0-alpha1'
-
+    //loading
+    compile 'com.github.gittjy:LoadingDialog:1.0.2'
 }

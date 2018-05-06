@@ -82,7 +82,8 @@
             android:name=".activity.ListTingCheWeiActivity"
             android:label="@string/title_activity_list_ting_che_wei"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.ChongZhiActivity"></activity>
+        <activity android:name=".activity.ChongZhiActivity" />
+        <activity android:name=".activity.LoadingAlert"></activity>
     </application>
 
 </manifest>

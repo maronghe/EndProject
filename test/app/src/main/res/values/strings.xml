@@ -233,4 +233,5 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_list_ting_che_wei">ListTingCheWeiActivity</string>
+
 </resources>

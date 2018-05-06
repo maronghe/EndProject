@@ -2,6 +2,9 @@ package logan.dl.com.myapplication.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import logan.dl.com.myapplication.R;
 
@@ -26,10 +29,19 @@ import logan.dl.com.myapplication.R;
  */
 public class YiJianFanKuiActivity extends Activity {
 
+    private Button yijianfankuianniu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yi_jian_fan_kui);
+        yijianfankuianniu = (Button)findViewById(R.id.fankuianniu);
+        yijianfankuianniu.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(YiJianFanKuiActivity.this,"意见反馈成功",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
