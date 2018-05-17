@@ -93,7 +93,7 @@ public class ChongZhiActivity extends AppCompatActivity implements View.OnClickL
     class MyThread implements Runnable{
         @Override
         public void run() {
-            String address = "http://47.93.194.171:8081/myproject/api/welcome/chongzhi?zh="+czshoujihao.getText().toString()+"&je="+czjine.getText().toString();
+            String address = StringUtil.URL+"chongzhi?zh="+czshoujihao.getText().toString()+"&je="+czjine.getText().toString();
             String str = "";
             HttpURLConnection connection = null;
             try {

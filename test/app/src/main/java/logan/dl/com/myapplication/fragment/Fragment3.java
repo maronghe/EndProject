@@ -57,7 +57,7 @@ public class Fragment3 extends Fragment implements View.OnClickListener{
         showMapBtn.setOnClickListener(this);
         chongzhiBtn.setOnClickListener(this);
         myMoney  =  (TextView) view.findViewById(R.id.urmoney);
-//        String address = "http://47.93.194.171:8081/myproject/api/welcome/getMoney?id=18742530580";
+//        String address = "http://192.168.155.1:8082/myproject/api/welcome/getMoney?id=18742530580";
 //        HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
 //            @Override
 //            public void onFinish(String response) {

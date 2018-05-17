@@ -20,4 +20,8 @@ public class StringUtil {
         return m.matches();
 
     }
+
+    public static final String URL = "http://192.168.155.1:8082/myproject/api/welcome/";
+    public static final String SERVER_URL = "http://192.168.155.1:8080/lym";
+
 }

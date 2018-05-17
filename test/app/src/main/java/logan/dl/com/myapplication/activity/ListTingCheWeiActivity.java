@@ -30,6 +30,7 @@ import logan.dl.com.myapplication.MainActivity;
 import logan.dl.com.myapplication.R;
 import logan.dl.com.myapplication.other.utils.HttpCallbackListener;
 import logan.dl.com.myapplication.other.utils.HttpUtil;
+import logan.dl.com.myapplication.other.utils.StringUtil;
 
 public class ListTingCheWeiActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
     String[] smss = {"goodgoodgoodgoodgoodgoodgoodgoodgoodgoodgoodgood", "greatgreatgreatgreatgreatgreatgreatgreatgreatgreatgreatgreatgreatgreat", "perfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfectperfect", "vvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodvery goodery good"};
@@ -37,6 +38,7 @@ public class ListTingCheWeiActivity extends AppCompatActivity implements Compoun
     private Switch tingcheSwtich;
     int status = 0;
     private Switch n1order,n2order,n3order,n4order,n5order,n6order;
+    private Switch n1stop;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +53,10 @@ public class ListTingCheWeiActivity extends AppCompatActivity implements Compoun
                     Gson gson = new Gson();
                     Map<String, Object> map = new HashMap<String, Object>();
                     map = gson.fromJson((String) msg.obj, map.getClass());
-                   Toast.makeText(ListTingCheWeiActivity.this,map.toString(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(ListTingCheWeiActivity.this,map.toString(),Toast.LENGTH_LONG).show();
+                }
+                else  if(msg.what == 2){
+                    Toast.makeText(ListTingCheWeiActivity.this,"Unlocking...",Toast.LENGTH_SHORT).show();
                 }
             }
         };
@@ -65,7 +70,28 @@ public class ListTingCheWeiActivity extends AppCompatActivity implements Compoun
         });
 
         tingcheSwtich = (Switch) findViewById(R.id.iwantstop);
-        tingcheSwtich.setOnCheckedChangeListener(this);
+        tingcheSwtich.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    {
+                        String address = StringUtil.SERVER_URL+"/JieSuoAPI";//Local
+                        HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
+                            @Override
+                            public void onFinish(String response) {
+                                Message message = Message.obtain();
+                                message.what = 2;
+                                handler.sendMessage(message);
+                            }
+                            @Override
+                            public void onError(Exception e) {
+                                Log.d("TAG", e.toString());
+                            }
+                        });
+                    }
+                }
+            }
+        });
         n1order = (Switch) findViewById(R.id.n1order);
         n1order.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -88,7 +114,7 @@ public class ListTingCheWeiActivity extends AppCompatActivity implements Compoun
     class MyThread implements  Runnable{
         @Override
         public void run() {
-            String address = "http://47.93.194.171:8081/myproject/api/welcome/n1order?status="+status;//Local
+            String address = StringUtil.URL+"n1order?status="+status;//Local
             HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
                 @Override
                 public void onFinish(String response) {
@@ -132,7 +158,7 @@ public class ListTingCheWeiActivity extends AppCompatActivity implements Compoun
 
         @Override
         public void run() {
-            String address = "http://47.93.194.171:8081/myproject/api/welcome/jidianqi?status="+status2;
+            String address = StringUtil.URL+"jidianqi?status="+status2;
             final int finalStatus = status2;
             HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
 
@@ -156,7 +182,7 @@ public class ListTingCheWeiActivity extends AppCompatActivity implements Compoun
             TimerTask task = new TimerTask() {
                 @Override
                 public void run() {
-                    String curl = "http://47.93.194.171:8081/myproject/api/welcome/jidianqi?status=0";
+                    String curl = StringUtil.URL+"jidianqi?status=0";
 
                     HttpUtil.sendHttpRequest(curl, new HttpCallbackListener() {
 

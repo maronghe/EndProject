@@ -34,6 +34,7 @@ import logan.dl.com.myapplication.activity.TingCheZTActivity;
 import logan.dl.com.myapplication.activity.YiJianFanKuiActivity;
 import logan.dl.com.myapplication.other.utils.HttpCallbackListener;
 import logan.dl.com.myapplication.other.utils.HttpUtil;
+import logan.dl.com.myapplication.other.utils.StringUtil;
 
 /**
  * Created by zhjzhang on 1/25/18.
@@ -98,7 +99,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
         @Override
         public void run() {
 
-            String address = "http://47.93.194.171:8081/myproject/api/welcome/getMoney?id=18742530580";
+            String address = StringUtil.URL+"getMoney?id=18742530580";
             String str = "";
             HttpURLConnection connection = null;
             try {
@@ -135,8 +136,8 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
     private void initWelcome(View view) {
 
 
-    //send http request   http://47.93.194.171:/myproject/api/welcome/1
-        String address = "http://47.93.194.171:8081/myproject/api/welcome/1";
+    //send http request   http://192.168.155.1:/myproject/api/welcome/1
+        String address = StringUtil.URL+"1";
         HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
 
             @Override
